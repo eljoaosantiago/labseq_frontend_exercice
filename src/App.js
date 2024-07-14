@@ -28,7 +28,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <div className="header-box">
+          All rights reserved to <a href="https://www.linkedin.com/in/eljoaosantiago/" target="_blank" className="">@eljoaosantiago</a>
+        </div>
+      </header>
+      <main className="App-main">
         <h1>Labseq Sequence</h1>
         <div className="d-flex">
           l({' '}
@@ -45,7 +50,7 @@ function App() {
         </div>
         {result !== null && <p>Result = {result}</p>}
         {error && <p>Error: {error}</p>}
-      </header>
+      </main >
     </div>
   );
 }
