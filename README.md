@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 📚 Labseq Exercice 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This exercice was made using Spring Boot as a Java framework.
+It was implemented a web GUI using React.js to invoke the service.
 
-## Available Scripts
+# 📝 How to Start the Application
 
-In the project directory, you can run:
+## Java Application (Backend)
 
-### `npm start`
+To build and run the Java code, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell
+# Open a terminal (Command Prompt or PowerShell for Windows, Terminal for macOS or Linux)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Clone the repository
+git clone https://github.com/Abblix/Oidc.Server.git
 
-### `npm test`
+# Navigate to the project directory and clean install with maven
+mvn clean install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the program
+mvn spring-boot:run
+```
 
-### `npm run build`
+## React.js Application (Frontend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To build and run the Java code, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```shell
+# Navigate to the project directory and clean install with maven
+cd frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start the program
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### What to do next?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Now that both backend and frontend are running you can run the localhost url in port 3000 to access the React Application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```shell
+http://localhost:3000/
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Then you are ready to test the application!
 
-## Learn More
+Optionally you can test the REST service using the backend url directly:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell
+http://localhost:8080/labseq/{n}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note: Insert a positive number in parameter {n}.
 
-### Code Splitting
+## 📚 API Documentation (Swagger)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The REST API documentation framework used was Open API Swagger as suggested.
 
-### Analyzing the Bundle Size
+### How to access
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To access the API documetation you can go to:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```shell
+http://localhost:8080/swagger-ui.html
+```
